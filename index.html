@@ -2,17 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <script src="/aframe.js" type="module"></script>
+    <title>A medieval kitchen</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
   </head>
   <body>
-    <div id="app">
 
-      <div id="a-frame"></div>
+    <a-scene inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" device-orientation-permission-ui="">
 
-    </div>
-    <script type="module" src="/main.js"></script>
+      <!-- Walls-->
+      <a-box class="wall north" position="0 1.5 -6.25" color="blue" width="12" height="3" material="" geometry="width: 13" depth="0.5" static-body>
+      </a-box>
+      
+      <a-box class="wall west" position="-6.25 1.5 0" color="red" width="12" height="3" material="" geometry="" rotation="0 90 0" depth="0.5"></a-box>
+      
+      <a-box class="wall south" position="0 1.5 6.25" color="yellow" width="12" height="3" material="" geometry="width: 13" rotation="180 0 0" depth="0.5"></a-box>
+      
+      <a-box class="wall east" position="6.25 1.5 0" color="green" width="12" height="3" material="" geometry="" rotation="0 -90 0" depth="0.5"></a-box>
+      
+      <a-plane color="darkgray" width="13" height="13" material="" geometry="" rotation="-90 0 0"></a-plane>
+
+      <!-- Oven -->
+      <a-box class="oven" position="-5.5 0.4 -5.5" color="purple" width="1" depth="1" height="0.8" material="" geometry="">
+      </a-box>
+
+      <!-- Potager -->
+      <a-box class="potager" position="5.5 0.4 -5.5" color="purple" width="1" depth="1" height="0.8" material="" geometry="">
+      </a-box>
+
+      <!-- Hearths -->
+
+      <a-box class="hearths" position="-1.50 0.875 -5.5" color="orange" height="1.75" width="3" depth="1" material="" geometry=""></a-box>
+      <a-box class="hearths" position="1.50 0.875 -5.5" color="orange" height="1.75" width="3" depth="1" material="" geometry=""></a-box>
+
+      <a-box class="hearths" position="-5.5 0.875 -1.5" color="orange" height="1.75" width="3" depth="1" material="" geometry="" rotation="0 90 0"></a-box>
+      <a-box class="hearths" position="-5.5 0.875 1.5" color="orange" height="1.75" width="3" depth="1" material="" geometry="" rotation="0 90 0"></a-box>
+
+      <a-box class="hearths" position="5.5 0.875 -1.5" color="orange" height="1.75" width="3" depth="1" material="" geometry="" rotation="0 90 0"></a-box>
+      <a-box class="hearths" position="5.5 0.875 1.5" color="orange" height="1.75" width="3" depth="1" material="" geometry="" rotation="0 90 0"></a-box>
+
+
+
   </body>
 </html>
