@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,74 +12,163 @@
       <a-scene>
         <!-- Asset management system -->
         <a-assets>
-          <a-asset-item id="floor_tile_large" src="assets/Kaykit_dungeon/floor_tile_large.gltf.glb"></a-asset-item>
-          <a-asset-item id="wall" src="assets/Kaykit_dungeon/wall.gltf.glb"></a-asset-item>
-          <a-asset-item id="wall_arched" src="assets/Kaykit_dungeon/wall_arched.gltf.glb"></a-asset-item>
-          <a-asset-item id="wall_arched_window" src="assets/Kaykit_dungeon/wall_archedwindow_open.gltf.glb"></a-asset-item>
+          <a-asset-item
+            id="floor_tile_large"
+            src="assets/Kaykit_dungeon/floor_tile_large.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="pillar"
+            src="assets/Kaykit_dungeon/pillar.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="wall"
+            src="assets/Kaykit_dungeon/wall.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="wall_half"
+            src="assets/Kaykit_dungeon/wall_half.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="wall_arched"
+            src="assets/Kaykit_dungeon/wall_arched.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="wall_arched_window"
+            src="assets/Kaykit_dungeon/wall_archedwindow_open.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="wall_corner"
+            src="assets/Kaykit_dungeon/wall_corner.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="wall_corner_small"
+            src="assets/Kaykit_dungeon/wall_corner_small.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="wall_doorway"
+            src="assets/Kaykit_dungeon/wall_doorway.glb"
+          ></a-asset-item>
         </a-assets>
 
-      <a-entity floor></a-entity>
+        <!-- <a-entity light="type: ambient; color: #444"></a-entity> -->
 
-      <a-gltf-model src="#wall" position="2 0 -2"></a-gltf-model>
-      <a-gltf-model src="#wall_arched" position="6 0 -2"></a-gltf-model>
-      <a-gltf-model src="#wall_arched" position="10 0 -2"></a-gltf-model>
-      <a-gltf-model src="#wall" position="14 0 -2"></a-gltf-model>
+        <a-sky color="#050724"></a-sky>
 
-      <a-gltf-model src="#wall" position="-2 0 2" rotation="0 90 0"></a-gltf-model>
-      <a-gltf-model src="#wall_arched" position="-2 0 6" rotation="0 90 0"></a-gltf-model>
-      <a-gltf-model src="#wall_arched" position="-2 0 10 " rotation="0 90 0"></a-gltf-model>
-      <a-gltf-model src="#wall" position="-2 0 14" rotation="0 90 0"></a-gltf-model>
+        <a-entity floor></a-entity>
+        <a-entity pillars></a-entity>
+        <a-entity walls></a-entity>
 
-      <a-gltf-model src="#wall" position="18 0 2" rotation="0 270 0"></a-gltf-model>
-      <a-gltf-model src="#wall_arched" position="18 0 6" rotation="0 270 0"></a-gltf-model>
-      <a-gltf-model src="#wall_arched" position="18 0 10" rotation="0 270 0"></a-gltf-model>
-      <a-gltf-model src="#wall" position="18 0 14" rotation="0 270 0"></a-gltf-model>
+        <!-- Wall North -->
+        <a-gltf-model
+          src="#wall_doorway"
+          position="-2 0 16"
+          rotation="0 90 0"
+        ></a-gltf-model>
+        <a-gltf-model
+          src="#wall_half"
+          position="-2 0 14"
+          rotation="0 90 0"
+        ></a-gltf-model>
+        <a-gltf-model
+          src="#wall_arched"
+          position="-2 0 10 "
+          rotation="0 90 0"
+        ></a-gltf-model>
+        <a-gltf-model
+          src="#wall_arched"
+          position="-2 0 6"
+          rotation="0 90 0"
+        ></a-gltf-model>
+        <a-gltf-model
+          src="#wall"
+          position="-2 0 2"
+          rotation="0 90 0"
+        ></a-gltf-model>
 
-      <a-gltf-model src="#wall_arched_window" position="2 0 18" rotation="0 180 0"></a-gltf-model>
-      <a-gltf-model src="#wall_arched_window" position="6 0 18" rotation="0 180 0"></a-gltf-model>
-      <a-gltf-model src="#wall_arched_window" position="10 0 18" rotation="0 180 0"></a-gltf-model>
-      <a-gltf-model src="#wall_arched_window" position="14 0 18" rotation="0 180 0"></a-gltf-model>
+        <!-- Wall East -->
+        <a-gltf-model src="#wall" position="2 0 -2"></a-gltf-model>
+        <a-gltf-model src="#wall_arched" position="6 0 -2"></a-gltf-model>
+        <a-gltf-model src="#wall_arched" position="10 0 -2"></a-gltf-model>
+        <a-gltf-model src="#wall" position="14 0 -2"></a-gltf-model>
+        <a-gltf-model src="#wall_half" position="16 0 -2"></a-gltf-model>
 
+        <!-- Wall South -->
+        <a-gltf-model
+          src="#wall_doorway"
+          position="18 0 0"
+          rotation="0 270 0"
+        ></a-gltf-model>
+        <a-gltf-model
+          src="#wall_half"
+          position="18 0 2"
+          rotation="0 270 0"
+        ></a-gltf-model>
+        <a-gltf-model
+          src="#wall_arched"
+          position="18 0 6"
+          rotation="0 270 0"
+        ></a-gltf-model>
+        <a-gltf-model
+          src="#wall_arched"
+          position="18 0 10"
+          rotation="0 270 0"
+        ></a-gltf-model>
+        <a-gltf-model
+          src="#wall"
+          position="18 0 14"
+          rotation="0 270 0"
+        ></a-gltf-model>
 
-      
+        <!-- Wall West -->
+        <a-gltf-model
+          src="#wall_half"
+          position="0 0 18"
+          rotation="0 180 0"
+        ></a-gltf-model>
+        <a-gltf-model
+          src="#wall_arched_window"
+          position="2 0 18"
+          rotation="0 180 0"
+        ></a-gltf-model>
+        <a-gltf-model
+          src="#wall_arched_window"
+          position="6 0 18"
+          rotation="0 180 0"
+        ></a-gltf-model>
+        <a-gltf-model
+          src="#wall_arched_window"
+          position="10 0 18"
+          rotation="0 180 0"
+        ></a-gltf-model>
+        <a-gltf-model
+          src="#wall_arched_window"
+          position="14 0 18"
+          rotation="0 180 0"
+        ></a-gltf-model>
+
+        <!-- Wall Corners WN to SW--->
+        <a-gltf-model
+          src="#wall_corner_small"
+          position="-2 0 18"
+          rotation="0 180 0"
+        ></a-gltf-model>
+        <a-gltf-model
+          src="#wall_corner"
+          position="-2 0 -2"
+          rotation="0 90 0"
+        ></a-gltf-model>
+        <a-gltf-model
+          src="#wall_corner_small"
+          position="18 0 -2"
+          rotation="0 0 0"
+        ></a-gltf-model>
+        <a-gltf-model
+          src="#wall_corner"
+          position="18 0 18"
+          rotation="0 270 0"
+        ></a-gltf-model>
       </a-scene>
-
     </div>
-
-    <!-- <a-scene inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" device-orientation-permission-ui=""> -->
-
-      <!-- Walls-->
-      <!-- <a-box class="wall north" position="0 1.5 -6.25" color="blue" width="12" height="3" material="" geometry="width: 13" depth="0.5" static-body>
-      </a-box>
-      
-      <a-box class="wall west" position="-6.25 1.5 0" color="#6a6559" width="12" height="3" material="" geometry="" rotation="0 90 0" depth="0.5"></a-box>
-      
-      <a-box class="wall south" position="0 1.5 6.25" color="yellow" width="12" height="3" material="" geometry="width: 13" rotation="180 0 0" depth="0.5"></a-box>
-      
-      <a-box class="wall east" position="6.25 1.5 0" color="green" width="12" height="3" material="" geometry="" rotation="0 -90 0" depth="0.5"></a-box>
-      
-      <a-plane color="darkgray" width="13" height="13" material="" geometry="" rotation="-90 0 0"></a-plane> -->
-
-      <!-- Oven -->
-      <!-- <a-box class="oven" position="-5.5 0.4 -5.5" color="purple" width="1" depth="1" height="0.8" material="" geometry="">
-      </a-box> -->
-
-      <!-- Potager -->
-      <!-- <a-box class="potager" position="5.5 0.4 -5.5" color="purple" width="1" depth="1" height="0.8" material="" geometry="">
-      </a-box> -->
-
-      <!-- Hearths -->
-
-      <!-- <a-box class="hearths" position="-1.50 0.875 -5.5" color="orange" height="1.75" width="3" depth="1" material="" geometry=""></a-box>
-      <a-box class="hearths" position="1.50 0.875 -5.5" color="orange" height="1.75" width="3" depth="1" material="" geometry=""></a-box>
-
-      <a-box class="hearths" position="-5.5 0.875 -1.5" color="orange" height="1.75" width="3" depth="1" material="" geometry="" rotation="0 90 0"></a-box>
-      <a-box class="hearths" position="-5.5 0.875 1.5" color="orange" height="1.75" width="3" depth="1" material="" geometry="" rotation="0 90 0"></a-box>
-
-      <a-box class="hearths" position="5.5 0.875 -1.5" color="orange" height="1.75" width="3" depth="1" material="" geometry="" rotation="0 90 0"></a-box>
-      <a-box class="hearths" position="5.5 0.875 1.5" color="orange" height="1.75" width="3" depth="1" material="" geometry="" rotation="0 90 0"></a-box> -->
-
-
-      <script type="module" src="/main.js"></script>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

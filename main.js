@@ -1,2 +1,3 @@
-import './components/floor';
-import './style.css';
+import "./components/floor";
+import "./components/pillars";
+import "./style.css";
