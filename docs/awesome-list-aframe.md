@@ -12,7 +12,7 @@
 - [VR keyboard](https://github.com/supermedium/aframe-super-keyboard) (last update: 2020)
 - [Teleportation controls](https://github.com/fernandojsg/aframe-teleport-controls)
 - [Super Hands](https://github.com/c-frame/aframe-super-hands-component)
+
 ## Examples
 
 - [Working examples Github](https://github.com/stemkoski/A-Frame-Examples) & [website](https://stemkoski.github.io/A-Frame-Examples/)
-- 
