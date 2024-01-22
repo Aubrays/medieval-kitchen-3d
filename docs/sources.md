@@ -13,3 +13,14 @@ https://www.wiki-anjou.fr/index.php/Dictionnaire_d%27architecture_de_Viollet_le_
 https://www.bing-bang-mag.com/local/cache-vignettes/L695xH502/cuisines-ducales-943ac.jpg?1663370553
 
 https://p.monumentum.fr/memoire/maxi/00005/apmh00005213.jpg
+
+https://www.chateau-blandy.fr/fr/les-cuisines
+
+https://www.flickr.com/photos/101048357@N04/50925180036/in/photostream/
+
+https://www.patrimoine-histoire.fr/Patrimoine/Dijon/Dijon-Musee-des-Beaux-Arts.htm
+
+http://www.vauchot-conteur.fr/2013/08/bourgogne-magazine-nouvelle-histoire-une-cuisine-de-reve/
+
+https://www.360cities.net/it/image/dijon-city-hall-ducale-kitchen
+

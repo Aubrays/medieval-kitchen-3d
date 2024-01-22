@@ -10,6 +10,24 @@ Ainsi si cette cuisine en 3D s'inspire de la cuisine du Palais des Ducs de Bourg
 - des ustensiles
 - du mobilier
 
+## Choix techniques
+
+Le projet est conçu avec A-frame, un framework Javascript s'appuyant sur la bibliothèque Three.JS.
+
+Pour améliorer la DX (l'expérience de développement), j'ai choisi de m'appuyer sur les outils usuels en JS :
+
+- ESlint pour débusquer rapidement des problèmes dans le code
+- Prettier pour formater automatiquement le code et gagner en lisibilité
+- Vite pour optimiser le code et profiter du rechargement à chaud (Hot Module Relaoding)
+
+### A-Frame et Vite : une presqu'incompatibilité
+
+A-Frame 1.5.0 n'est pas compatible avec les EcmaScript Modules (ESM) et un des auteurs de la bibliothèque annonçait déjà en avril 2022 dans un [commentaire sur Github](https://github.com/aframevr/aframe/issues/4242) qu'aucun support n'était prévu pour le moment.
+
+Résultat, on se contente de mettre la balise `<script>` en haut de page en s'appuyant soit sur un CDN soit sur le package installé dans node_modules.
+
+Alors pourquoi garder Vite ? Un peu par habitude, je l'avoue. Toutefois Vite s'avère quand même utile pour construire un CSS optimisé. Ouf !
+
 ## Contexte
 
 Ce projet a été publié en janvier 2023 par Loïc Aubrays pour le cours _Réalité virtuelle et augmentée_ d'Isaac Pante en master d'informatique pour les sciences humaines de la [Faculté des Lettres, Université de Lausanne](https://unil.ch/lettres).

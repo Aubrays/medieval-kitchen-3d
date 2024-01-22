@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A medieval kitchen</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.rawgit.com/mattatz/THREE.Fire/master/FireShader.js"></script>
+    <script src="https://cdn.rawgit.com/mattatz/THREE.Fire/master/Fire.js"></script>
   </head>
   <body>
     <div id="app">
@@ -48,15 +51,32 @@
             id="wall_doorway"
             src="assets/Kaykit_dungeon/wall_doorway.glb"
           ></a-asset-item>
+
+          <a-mixin id="checkpoint"></a-mixin>
+          <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
         </a-assets>
 
-        <!-- <a-entity light="type: ambient; color: #444"></a-entity> -->
+        <!-- Player -->
+        <a-entity id="rig" movement-controls="controls: checkpoint" checkpoint-controls="mode: animate" position="0 0 16" rotation="0 -90 0">
+          <a-entity camera
+                    position="0 1.6 0"
+                    look-controls="pointerLockEnabled: true">
+            <a-entity cursor
+                      raycaster="objects:[checkpoint]"
+                      position="0 0 -1"
+                      geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;"
+                      material="color: #CCC; shader: flat;"></a-entity>
+          </a-entity>
+        </a-entity>
+
+        <a-entity light="type: ambient; color: #444"></a-entity>
 
         <a-sky color="#050724"></a-sky>
 
         <a-entity floor></a-entity>
         <a-entity pillars></a-entity>
         <a-entity walls></a-entity>
+        <a-entity fire></a-entity>
 
         <!-- Wall North -->
         <a-gltf-model
@@ -167,6 +187,14 @@
           position="18 0 18"
           rotation="0 270 0"
         ></a-gltf-model>
+
+        <!-- Checkpoints -->
+        <a-entity position="0 0 0">
+          <a-cylinder checkpoint radius="1" height="0.2" position="0 0 16" color="#39BB82"></a-cylinder>
+          <a-cylinder checkpoint radius="1" height="0.2" position="3 0 0" color="#39BB82"></a-cylinder>
+          <a-cylinder checkpoint radius="1" height="0.2" position="-3 0 0" color="#39BB82"></a-cylinder>
+        </a-entity>
+
       </a-scene>
     </div>
     <script type="module" src="/main.js"></script>
