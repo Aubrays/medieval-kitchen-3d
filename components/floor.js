@@ -9,6 +9,7 @@ AFRAME.registerComponent("floor", {
           y: 0,
           z: 4 * col,
         });
+        tile.setAttribute('shadow', "receive: true; cast: false;");
         this.el.appendChild(tile);
       }
     }

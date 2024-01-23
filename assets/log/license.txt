@@ -1,0 +1,11 @@
+Model Information:
+* title:	Log - Blacksmith's workshop assets
+* source:	https://sketchfab.com/3d-models/log-blacksmiths-workshop-assets-b9ae831696c8444aa5130d9b1c071ab7
+* author:	Kyan0s (https://sketchfab.com/kyan0s)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Log - Blacksmith's workshop assets" (https://sketchfab.com/3d-models/log-blacksmiths-workshop-assets-b9ae831696c8444aa5130d9b1c071ab7) by Kyan0s (https://sketchfab.com/kyan0s) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

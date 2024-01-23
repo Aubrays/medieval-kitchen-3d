@@ -1,4 +1,5 @@
-import "./components/fire";
+// import "./components/shaders/fire";
+import "./components/triangleFire";
 import "./components/floor";
 import "./components/pillars";
 import "./style.css";

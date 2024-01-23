@@ -31,3 +31,11 @@ Alors pourquoi garder Vite ? Un peu par habitude, je l'avoue. Toutefois Vite s'a
 ## Contexte
 
 Ce projet a été publié en janvier 2023 par Loïc Aubrays pour le cours _Réalité virtuelle et augmentée_ d'Isaac Pante en master d'informatique pour les sciences humaines de la [Faculté des Lettres, Université de Lausanne](https://unil.ch/lettres).
+
+## Credits
+
+["Log - Blacksmith's workshop assets"](https://skfb.ly/69GOy) by Kyan0s is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
+
+["Logs - Blacksmith's workshop assets"](https://skfb.ly/69CxV) by Kyan0s is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
+
+[Campfire VR](https://medium.com/@dirkk/campfire-vr-fa654d15e92a) for the fire shader

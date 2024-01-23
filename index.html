@@ -7,13 +7,12 @@
     <title>A medieval kitchen</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
-    <script src="https://cdn.rawgit.com/mattatz/THREE.Fire/master/FireShader.js"></script>
-    <script src="https://cdn.rawgit.com/mattatz/THREE.Fire/master/Fire.js"></script>
   </head>
   <body>
     <div id="app">
       <a-scene>
-        <!-- Asset management system -->
+
+        <!-- start Asset management system -->
         <a-assets>
           <a-asset-item
             id="floor_tile_large"
@@ -51,55 +50,83 @@
             id="wall_doorway"
             src="assets/Kaykit_dungeon/wall_doorway.glb"
           ></a-asset-item>
+          <a-asset-item
+            id="arched_chimney"
+            src="assets/Kaykit_dungeon/arched_chimney.glb"
+          ></a-asset-item>
+          <a-asset-item id="log" src="assets/log/log.glb"></a-asset-item>
 
           <a-mixin id="checkpoint"></a-mixin>
           <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
-        </a-assets>
+        </a-assets> <!-- end Asset management system -->
 
-        <!-- Player -->
-        <a-entity id="rig" movement-controls="controls: checkpoint" checkpoint-controls="mode: animate" position="0 0 16" rotation="0 -90 0">
-          <a-entity camera
-                    position="0 1.6 0"
-                    look-controls="pointerLockEnabled: true">
-            <a-entity cursor
-                      raycaster="objects:[checkpoint]"
-                      position="0 0 -1"
-                      geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;"
-                      material="color: #CCC; shader: flat;"></a-entity>
+        <!-- start Player -->
+        <a-entity
+          id="rig"
+          movement-controls="controls: checkpoint"
+          checkpoint-controls="mode: animate"
+          position="0 0 16"
+          rotation="0 -90 0"
+        >
+          <a-entity
+            camera
+            position="0 1.6 0"
+            look-controls="pointerLockEnabled: true"
+          >
+            <a-entity
+              cursor
+              raycaster="objects:[checkpoint]"
+              position="0 0 -1"
+              geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;"
+              material="color: #CCC; shader: flat;"
+            ></a-entity>
           </a-entity>
-        </a-entity>
+        </a-entity><!-- end Player -->
 
-        <a-entity light="type: ambient; color: #444"></a-entity>
 
-        <a-sky color="#050724"></a-sky>
+
+        
 
         <a-entity floor></a-entity>
         <a-entity pillars></a-entity>
         <a-entity walls></a-entity>
-        <a-entity fire></a-entity>
 
         <!-- Wall North -->
         <a-gltf-model
+        shadow="receive: false; cast:true;"
           src="#wall_doorway"
           position="-2 0 16"
           rotation="0 90 0"
         ></a-gltf-model>
         <a-gltf-model
+        shadow="receive: false; cast:true;"
           src="#wall_half"
           position="-2 0 14"
           rotation="0 90 0"
         ></a-gltf-model>
-        <a-gltf-model
-          src="#wall_arched"
-          position="-2 0 10 "
+
+        <a-entity
+          gltf-model="#arched_chimney"
+          material="transparent: false; opacity: 1.0;"
+          shadow="receive: false; cast:true;"
+          position="-2 0 10"
           rotation="0 90 0"
-        ></a-gltf-model>
+        ></a-entity>
+          <!-- <a-gltf-model
+            shadow="receive: false; cast:true;"
+            src="#arched_chimney"
+            position="-2 0 10 "
+            rotation="0 90 0"
+            transparent="0"
+          ></a-gltf-model> -->
         <a-gltf-model
-          src="#wall_arched"
+          src="#arched_chimney"
           position="-2 0 6"
           rotation="0 90 0"
+          shadow="receive: false; cast:true;"
         ></a-gltf-model>
         <a-gltf-model
+          shadow="receive: false; cast:true;"
           src="#wall"
           position="-2 0 2"
           rotation="0 90 0"
@@ -188,12 +215,78 @@
           rotation="0 270 0"
         ></a-gltf-model>
 
+        <!-- start FIRE -->
+        <a-entity position="-1.725 0.587 10">
+          <!-- LOGS-->
+          <a-gltf-model
+            src="#log"
+            position="0 0 0.027"
+            rotation="0 90 0"
+            scale="0.75 1 0.9"
+            shadow="receive: false; cast: false;"
+          ></a-gltf-model>
+          <a-gltf-model
+            src="#log"
+            position="0.183 0.069 -0.072"
+            rotation="2 75 -15"
+            shadow="receive: false; cast: false;"
+          ></a-gltf-model>
+          <a-gltf-model
+            src="#log"
+            position="0.305 0 0.118"
+            rotation="0 69 0"
+            shadow="receive: false; cast: false;"
+          ></a-gltf-model>
+
+          <!-- Flames-->
+          <a-entity
+            triangle-fire="particles: 500;"
+            position="0 -0.2 0"
+          ></a-entity>
+
+           <!-- start Light of flames-->
+          <a-entity
+            animation="property: position; dur: 223; to:0 0 0.05; loop:true; dir: alternate; easing: easeInOutQuad">
+            <a-entity position="0.0 0.6 0.0"
+              animation="property: position; dur: 360; to: 0 0.65 0; loop:true; dir: alternate; easing: easeInOutQuad;">
+              <a-entity
+                light="type: point; color: #FFA200; intensity: 5; distance: 20.0; castShadow: true; shadowCameraVisible: true; decay: 5;"
+                animation="property: light.intensity; dur: 293; to:6; loop:true; dir:alternate; easing:easeInOutQuad;"
+              >
+            </a-entity>
+            </a-entity>
+          </a-entity> <!-- end Light of flames-->
+        </a-entity> <!-- end FIRE -->
+       
+
         <!-- Checkpoints -->
         <a-entity position="0 0 0">
-          <a-cylinder checkpoint radius="1" height="0.2" position="0 0 16" color="#39BB82"></a-cylinder>
-          <a-cylinder checkpoint radius="1" height="0.2" position="3 0 0" color="#39BB82"></a-cylinder>
-          <a-cylinder checkpoint radius="1" height="0.2" position="-3 0 0" color="#39BB82"></a-cylinder>
+          <a-cylinder
+            checkpoint
+            radius="1"
+            height="0.2"
+            position="0 0 16"
+            color="#39BB82"
+          ></a-cylinder>
+          <a-cylinder
+            checkpoint
+            radius="1"
+            height="0.2"
+            position="3 0 0"
+            color="#39BB82"
+          ></a-cylinder>
+          <a-cylinder
+            checkpoint
+            radius="1"
+            height="0.2"
+            position="-3 0 0"
+            color="#39BB82"
+          ></a-cylinder>
         </a-entity>
+
+        <!-- Sky and ambient light -->
+        <a-entity light="type: ambient; color: #444"></a-entity>
+        <a-sky color="#050724"></a-sky>
 
       </a-scene>
     </div>

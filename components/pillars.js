@@ -11,12 +11,14 @@ AFRAME.registerComponent("pillars", {
         }
 
         let tile = document.createElement("a-entity");
+
         tile.setAttribute("gltf-model", "#pillar");
         tile.setAttribute("position", {
           x: 6 * row + offset,
           y: 0,
           z: 6 * col + offset,
         });
+        tile.setAttribute('shadow', "receive: false; cast: true;");
         this.el.appendChild(tile);
       }
     }
