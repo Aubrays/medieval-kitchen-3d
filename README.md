@@ -38,4 +38,8 @@ Ce projet a été publié en janvier 2023 par Loïc Aubrays pour le cours _Réal
 
 ["Logs - Blacksmith's workshop assets"](https://skfb.ly/69CxV) by Kyan0s is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
 
-[Campfire VR](https://medium.com/@dirkk/campfire-vr-fa654d15e92a) for the fire shader
+[Campfire VR](https://medium.com/@dirkk/campfire-vr-fa654d15e92a) for fire effects
+
+"Fireplace" (https://skfb.ly/69GFC) by mageaster is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+https://felipegrebogeart.itch.io/low-poly-food-pack

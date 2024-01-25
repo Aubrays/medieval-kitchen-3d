@@ -10,10 +10,18 @@
   </head>
   <body>
     <div id="app">
-      <a-scene>
 
+      <div id="UI" style="z-index: 1000; position: fixed; margin: 1rem;">
+        <div style="border:1px solid black; background-color: rgba(75, 2, 59, 0.363); margin:auto">
+          <button id="start-exp">Commencer</button>
+        </div>
+      </div>
+
+
+      <a-scene background="color: #050724;">
         <!-- start Asset management system -->
         <a-assets>
+          <!-- start Walls Models-->
           <a-asset-item
             id="floor_tile_large"
             src="assets/Kaykit_dungeon/floor_tile_large.gltf.glb"
@@ -29,10 +37,6 @@
           <a-asset-item
             id="wall_half"
             src="assets/Kaykit_dungeon/wall_half.gltf.glb"
-          ></a-asset-item>
-          <a-asset-item
-            id="wall_arched"
-            src="assets/Kaykit_dungeon/wall_arched.gltf.glb"
           ></a-asset-item>
           <a-asset-item
             id="wall_arched_window"
@@ -54,11 +58,45 @@
             id="arched_chimney"
             src="assets/Kaykit_dungeon/arched_chimney.glb"
           ></a-asset-item>
+          <!-- end Walls Models-->
+
+          <!-- start Accessories Models -->
           <a-asset-item id="log" src="assets/log/log.glb"></a-asset-item>
+          <a-asset-item
+            id="keg_decorated"
+            src="assets/Kaykit_dungeon/keg_decorated.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="table_long"
+            src="assets/Kaykit_dungeon/table_long.gltf.glb"
+          ></a-asset-item>
+          <!-- end Accessories Models -->
+          
+
+          <!-- Audios-->
+          <audio
+            id="crackling-fire"
+            src="assets/sounds/crackling-fire.ogg"
+            preload="auto"
+          ></audio>
+
+          <audio
+            id="music"
+            src="assets/sounds/a_night_s_respite.ogg"
+            preload="auto"
+          ></audio>
 
           <a-mixin id="checkpoint"></a-mixin>
           <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
-        </a-assets> <!-- end Asset management system -->
+        </a-assets>
+        <!-- end Asset management system -->
+
+        <a-sound
+          id="ambient-sound"
+          src="#music"
+          autoplay="true"
+          loop="true"
+        ></a-sound>
 
         <!-- start Player -->
         <a-entity
@@ -80,12 +118,8 @@
               geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;"
               material="color: #CCC; shader: flat;"
             ></a-entity>
-          </a-entity>
-        </a-entity><!-- end Player -->
-
-
-
-        
+          </a-entity> </a-entity
+        ><!-- end Player -->
 
         <a-entity floor></a-entity>
         <a-entity pillars></a-entity>
@@ -93,13 +127,13 @@
 
         <!-- Wall North -->
         <a-gltf-model
-        shadow="receive: false; cast:true;"
+          shadow="receive: false; cast:true;"
           src="#wall_doorway"
           position="-2 0 16"
           rotation="0 90 0"
         ></a-gltf-model>
         <a-gltf-model
-        shadow="receive: false; cast:true;"
+          shadow="receive: false; cast:true;"
           src="#wall_half"
           position="-2 0 14"
           rotation="0 90 0"
@@ -112,7 +146,7 @@
           position="-2 0 10"
           rotation="0 90 0"
         ></a-entity>
-          <!-- <a-gltf-model
+        <!-- <a-gltf-model
             shadow="receive: false; cast:true;"
             src="#arched_chimney"
             position="-2 0 10 "
@@ -134,8 +168,8 @@
 
         <!-- Wall East -->
         <a-gltf-model src="#wall" position="2 0 -2"></a-gltf-model>
-        <a-gltf-model src="#wall_arched" position="6 0 -2"></a-gltf-model>
-        <a-gltf-model src="#wall_arched" position="10 0 -2"></a-gltf-model>
+        <a-gltf-model src="#arched_chimney" position="6 0 -2"></a-gltf-model>
+        <a-gltf-model src="#arched_chimney" position="10 0 -2"></a-gltf-model>
         <a-gltf-model src="#wall" position="14 0 -2"></a-gltf-model>
         <a-gltf-model src="#wall_half" position="16 0 -2"></a-gltf-model>
 
@@ -151,12 +185,12 @@
           rotation="0 270 0"
         ></a-gltf-model>
         <a-gltf-model
-          src="#wall_arched"
+          src="#arched_chimney"
           position="18 0 6"
           rotation="0 270 0"
         ></a-gltf-model>
         <a-gltf-model
-          src="#wall_arched"
+          src="#arched_chimney"
           position="18 0 10"
           rotation="0 270 0"
         ></a-gltf-model>
@@ -215,28 +249,15 @@
           rotation="0 270 0"
         ></a-gltf-model>
 
+        <a-entity logs position="16 0.587 10"></a-entity>
+
         <!-- start FIRE -->
-        <a-entity position="-1.725 0.587 10">
-          <!-- LOGS-->
-          <a-gltf-model
-            src="#log"
-            position="0 0 0.027"
-            rotation="0 90 0"
-            scale="0.75 1 0.9"
-            shadow="receive: false; cast: false;"
-          ></a-gltf-model>
-          <a-gltf-model
-            src="#log"
-            position="0.183 0.069 -0.072"
-            rotation="2 75 -15"
-            shadow="receive: false; cast: false;"
-          ></a-gltf-model>
-          <a-gltf-model
-            src="#log"
-            position="0.305 0 0.118"
-            rotation="0 69 0"
-            shadow="receive: false; cast: false;"
-          ></a-gltf-model>
+        <a-entity
+          position="-1.725 0.587 10"
+          sound="src: #crackling-fire; autoplay: true; loop: true; refDistance: 1; maxDistance: 12; rolloffFactor: 1; volume: 1; distanceModel: inverse;"
+        >
+        
+        <a-entity logs></a-entity>
 
           <!-- Flames-->
           <a-entity
@@ -244,20 +265,47 @@
             position="0 -0.2 0"
           ></a-entity>
 
-           <!-- start Light of flames-->
+          <!-- start Light of flames-->
           <a-entity
-            animation="property: position; dur: 223; to:0 0 0.05; loop:true; dir: alternate; easing: easeInOutQuad">
-            <a-entity position="0.0 0.6 0.0"
-              animation="property: position; dur: 360; to: 0 0.65 0; loop:true; dir: alternate; easing: easeInOutQuad;">
+            animation="property: position; dur: 223; to:0 0 0.05; loop:true; dir: alternate; easing: easeInOutQuad"
+          >
+            <a-entity
+              position="0.0 0.6 0.0"
+              animation="property: position; dur: 360; to: 0 0.65 0; loop:true; dir: alternate; easing: easeInOutQuad;"
+            >
               <a-entity
                 light="type: point; color: #FFA200; intensity: 5; distance: 20.0; castShadow: true; shadowCameraVisible: true; decay: 5;"
                 animation="property: light.intensity; dur: 293; to:6; loop:true; dir:alternate; easing:easeInOutQuad;"
               >
+              </a-entity>
             </a-entity>
-            </a-entity>
-          </a-entity> <!-- end Light of flames-->
-        </a-entity> <!-- end FIRE -->
-       
+          </a-entity>
+          <!-- end Light of flames-->
+        </a-entity>
+        <!-- end FIRE -->
+
+        <a-gltf-model
+          src="#keg_decorated"
+          position="13.75 0 -0.6"
+          rotation="0 0 0"
+          scale="0.75 0.75 0.75"
+        ></a-gltf-model>
+
+        <a-gltf-model
+          src="#table_long"
+          position="12 0 8"
+          rotation="0 0 0"
+          scale="1 0.8 1"
+          shadow="cast:true; receive:true;"
+        ></a-gltf-model>
+
+        <a-gltf-model
+          src="#table_long"
+          position="4 0 8"
+          rotation="0 0 0"
+          scale="1 0.8 1"
+          shadow="cast:true; receive:true;"
+        ></a-gltf-model>
 
         <!-- Checkpoints -->
         <a-entity position="0 0 0">
@@ -286,8 +334,8 @@
 
         <!-- Sky and ambient light -->
         <a-entity light="type: ambient; color: #444"></a-entity>
-        <a-sky color="#050724"></a-sky>
 
+        <!-- <a-sky color="#050724"></a-sky> -->
       </a-scene>
     </div>
     <script type="module" src="/main.js"></script>
