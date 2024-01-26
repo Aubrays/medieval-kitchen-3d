@@ -27,7 +27,7 @@ window.onload = function () {
 
     checkpointEl.setAttribute(
       "sound",
-      `src: #ping; autoplay:true; volume: 1.5;`,
+      `src: #welcome; autoplay:true; volume: 1.5;`,
     );
 
     checkpointEl.addEventListener("sound-ended", () => {
@@ -45,22 +45,36 @@ const checkpoints = [
   {
     id: "point-1",
     position: "0.5 0 9",
-    offset: "1 0 1",
-    rotation: "0 90 0",
-    sound: "#ping",
+    offset: "0 0 1",
+    rotation: "0 -12 0",
   },
   {
     id: "point-2",
-    position: "0.5 0 4",
-    offset: "1 0 1",
-    rotation: "0 90 0",
-    sound: "#ping",
+    position: "0.5 0 2",
+    offset: "0 0 2",
+    rotation: "0 30 0",
+    sound: "#hit_on_table",
+  },
+  {
+    id: "point-3",
+    position: "6 0 2",
+    offset: "-1 0 1",
+    rotation: "0 -50 0",
+    sound: "#cutting_sound",
+  },
+  {
+    id: "point-4",
+    position: "12 0 4",
+    offset: "-2 0 1",
+    rotation: "0 -75 0",
+    sound: "#beer",
   },
   {
     id: "end-point",
-    position: "17 0 17",
+    position: "12 0 17",
     offset: "-1 0 -1",
-    rotation: "0 0 0",
+    rotation: "0 225 0",
+    sound: "#bye",
   },
 ];
 
@@ -72,6 +86,7 @@ AFRAME.registerComponent("add-next-guyde", {
     this.el.setAttribute("id", checkpoint.id);
     this.el.setAttribute("position", checkpoint.position);
     this.el.setAttribute("guyde", `offset: ${checkpoint.offset}`);
+    this.el.setAttribute("rotation", checkpoint.rotation);
   },
 });
 

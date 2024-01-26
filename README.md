@@ -1,14 +1,10 @@
 # Cuisine médiévale 3D
 
-Dans quel environnement les cuisiniers médiévaux réalisaient-ils des banquets aux multiples plats et aux très nombreux convives ? Si nous savons que certains plats n'atteignaient pas les personnes les plus modestes, il fallait quand même cuisiner l'ensemble. Maître Chiquart, dans son ..., mentionne notamment
+Dans quel environnement les cuisiniers médiévaux réalisaient-ils des banquets aux multiples plats et aux très nombreux convives ? Si nous savons que certains plats n'atteignaient pas les personnes les plus modestes, il fallait quand même cuisiner l'ensemble.
 
 Afin de comprendre l'univers des cuisines médiévales, nous avons opté pour une représentation artistique s'inspirant des sources médiévales. Et si la cuisine s'effectue aussi dans les maisons bourgeoises et dans les foyers modestes, nous avons choisi de travailler avec les sources iconographiques et archéologiques à notre disposition et celles-ci concernent essentiellement les châteaux. Ce corpus est d'ailleurs discutable, car seules quelques cuisines sont connues car faites de pierre. Entre les cabanes en bois abritant de simples foyers ou les tentes en extérieur, il était plutôt fréquent de cuisiner à l'extérieur lors des grandes occasions et même au quotidien en raison du risque d'incendie.
 
-Ainsi si cette cuisine en 3D s'inspire de la cuisine du Palais des Ducs de Bourgogne à Dijon, elle ne cherche pas à la reproduire fidèlement. Son objectif est de rassembler un ensemble d'éléments des cuisines du XVe siècle :
-
-- des dispositifs de cuisson
-- des ustensiles
-- du mobilier
+Ainsi si cette cuisine en 3D s'inspire de la cuisine du Palais des Ducs de Bourgogne à Dijon, elle ne cherche pas à la reproduire fidèlement. Si l'objectif était de rassembler un ensemble d'éléments des cuisines du XVe siècle, tels des ustensiles de cuisine et du mobilier, le résultat est plutôt une ambiance qu'un inventaire.
 
 ## Choix techniques
 
@@ -41,3 +37,5 @@ Ce projet a été publié en janvier 2024 par Loïc Aubrays pour le cours _Réal
 [Fireplace](https://skfb.ly/69GFC) by mageaster is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
 
 [Guest male 4 - Medieval Fantasy Challenge](https://skfb.ly/69VX9) by tuturu is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
+
+Sound Effect by [Sergei Chetvertnykh](https://pixabay.com/users/sergequadrado-24990007/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=113119) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=113119")
