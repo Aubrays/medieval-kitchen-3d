@@ -1,5 +1,7 @@
 AFRAME.registerComponent("logs", {
     init: function () {
+        this.el.classList.add("logs");
+        
         let log = document.createElement("a-gltf-model");
         log.setAttribute("src", "#log");
         log.setAttribute('shadow', "receive: false; cast: false;");

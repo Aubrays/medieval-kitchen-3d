@@ -26,11 +26,9 @@ A-Frame 1.5.0 n'est pas compatible avec les EcmaScript Modules (ESM) et un des a
 
 Résultat, on se contente de mettre la balise `<script>` en haut de page en s'appuyant soit sur un CDN soit sur le package installé dans node_modules.
 
-Alors pourquoi garder Vite ? Un peu par habitude, je l'avoue. Toutefois Vite s'avère quand même utile pour construire un CSS optimisé. Ouf !
-
 ## Contexte
 
-Ce projet a été publié en janvier 2023 par Loïc Aubrays pour le cours _Réalité virtuelle et augmentée_ d'Isaac Pante en master d'informatique pour les sciences humaines de la [Faculté des Lettres, Université de Lausanne](https://unil.ch/lettres).
+Ce projet a été publié en janvier 2024 par Loïc Aubrays pour le cours _Réalité virtuelle et augmentée_ d'Isaac Pante en master d'informatique pour les sciences humaines de la [Faculté des Lettres, Université de Lausanne](https://unil.ch/lettres).
 
 ## Credits
 
@@ -40,6 +38,6 @@ Ce projet a été publié en janvier 2023 par Loïc Aubrays pour le cours _Réal
 
 [Campfire VR](https://medium.com/@dirkk/campfire-vr-fa654d15e92a) for fire effects
 
-"Fireplace" (https://skfb.ly/69GFC) by mageaster is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+[Fireplace](https://skfb.ly/69GFC) by mageaster is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
 
-https://felipegrebogeart.itch.io/low-poly-food-pack
+[Guest male 4 - Medieval Fantasy Challenge](https://skfb.ly/69VX9) by tuturu is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).

@@ -1,5 +1,7 @@
 AFRAME.registerComponent("pillars", {
   init: function () {
+    this.el.setAttribute('id', 'pillars');
+    
     let offset = 2;
     
     for (let row = 0; row <= 2; row++) {
