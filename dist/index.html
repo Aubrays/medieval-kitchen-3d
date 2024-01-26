@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A medieval kitchen</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+    <script type="module" crossorigin src="/medieval-kitchen-3d/assets/index-fxSifK1L.js"></script>
+    <link rel="stylesheet" crossorigin href="/medieval-kitchen-3d/assets/index-74CktXpQ.css">
+  </head>
+  <body>
+    <div id="app">
+      <div id="UI">
+        <div class="wrapper">
+          <h1>A la découverte d'une cuisine médiévale</h1>
+          <button class="bn39" id="start-exp">
+            <span class="bn39span">Commencer</span>
+          </button>
+        </div>
+      </div>
+
+      <a-scene background="color: #050724;">
+        <!-- start Asset management system -->
+        <a-assets>
+          <!-- start Walls Models-->
+          <a-asset-item
+            id="floor_tile_large"
+            src="assets/Kaykit_dungeon/floor_tile_large.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="pillar"
+            src="assets/Kaykit_dungeon/pillar.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="wall"
+            src="assets/Kaykit_dungeon/wall.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="wall_half"
+            src="assets/Kaykit_dungeon/wall_half.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="wall_arched_window"
+            src="assets/Kaykit_dungeon/wall_archedwindow_open.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="wall_corner"
+            src="assets/Kaykit_dungeon/wall_corner.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="wall_corner_small"
+            src="assets/Kaykit_dungeon/wall_corner_small.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="wall_doorway"
+            src="assets/Kaykit_dungeon/wall_doorway.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="arched_chimney"
+            src="assets/Kaykit_dungeon/arched_chimney.glb"
+          ></a-asset-item>
+          <!-- end Walls Models-->
+
+          <!-- start Furniture Models -->
+          <a-asset-item
+            id="keg_decorated"
+            src="assets/Kaykit_dungeon/keg_decorated.gltf.glb"
+          ></a-asset-item>
+          <a-asset-item
+            id="table_long"
+            src="assets/Kaykit_dungeon/table_long.gltf.glb"
+          ></a-asset-item>
+          <!-- end Furniture Models -->
+
+          <!-- start Accessories Models -->
+          <a-asset-item id="log" src="assets/log/log.glb"></a-asset-item>
+          <a-asset-item
+            id="knife"
+            src="assets/Kaykit_restaurant/knife.gltf"
+          ></a-asset-item>
+          <a-asset-item
+            id="plate"
+            src="assets/Kaykit_restaurant/plate.gltf"
+          ></a-asset-item>
+          <a-asset-item
+            id="pot_b"
+            src="assets/Kaykit_restaurant/pot_B.gltf"
+          ></a-asset-item>
+          <a-asset-item
+            id="crate"
+            src="assets/Kaykit_restaurant/crate.gltf"
+          ></a-asset-item>
+          <a-asset-item
+            id="crate_carrots"
+            src="assets/Kaykit_restaurant/crate_carrots.gltf"
+          ></a-asset-item>
+          <!-- end Accessories Models -->
+
+          <!-- start Food Models-->
+          <a-asset-item id="pork" src="assets/food/pork.glb"></a-asset-item>
+          <a-asset-item id="peak" src="assets/food/peak.glb"></a-asset-item>
+          <a-asset-item
+            id="carrot"
+            src="assets/Kaykit_restaurant/food_ingredient_carrot.gltf"
+          ></a-asset-item>
+          <a-asset-item
+            id="carrot_chopped"
+            src="assets/Kaykit_restaurant/food_ingredient_carrot_chopped.gltf"
+          ></a-asset-item>
+          <a-asset-item
+            id="cheese"
+            src="assets/Kaykit_restaurant/food_ingredient_cheese.gltf"
+          ></a-asset-item>
+          <a-asset-item
+            id="cheese_chopped"
+            src="assets/Kaykit_restaurant/food_ingredient_cheese_chopped.gltf"
+          ></a-asset-item>
+          <a-asset-item
+            id="onion"
+            src="assets/Kaykit_restaurant/food_ingredient_onion.gltf"
+          ></a-asset-item>
+          <a-asset-item
+            id="onion_chopped"
+            src="assets/Kaykit_restaurant/food_ingredient_onion_chopped.gltf"
+          ></a-asset-item>
+          <a-asset-item
+            id="steak"
+            src="assets/Kaykit_restaurant/food_ingredient_steak.gltf"
+          ></a-asset-item>
+          <a-asset-item
+            id="lettuce"
+            src="assets/Kaykit_restaurant/food_ingredient_lettuce.gltf"
+          ></a-asset-item>
+
+          <!-- end Food Models -->
+
+          <a-asset-item id="guyde" src="assets/guyde.glb"></a-asset-item>
+
+          <!-- Audios-->
+          <audio
+            id="crackling-fire"
+            src="assets/sounds/crackling-fire.ogg"
+            preload="auto"
+          ></audio>
+          <audio
+            id="hit_on_table"
+            src="assets/sounds/hit-on-table.ogg"
+            preload="auto"
+          ></audio>
+
+          <audio
+            id="cutting_sound"
+            src="assets/sounds/cutting_sound.ogg"
+            preload="auto"
+          ></audio>
+
+          <audio
+            id="beer"
+            src="assets/sounds/beerpour.mp3"
+            preload="auto"
+          ></audio>
+
+          <audio
+            id="welcome"
+            src="assets/sounds/welcome-traveler.mp3"
+            preload="auto"
+          ></audio>
+          <audio
+            id="bye"
+            src="assets/sounds/bye-bye.mp3"
+            preload="auto"
+          ></audio>
+
+          <audio
+            id="music"
+            src="assets/sounds/a_night_s_respite.ogg"
+            preload="auto"
+          ></audio>
+
+          <audio id="ping" src="assets/sounds/ping.mp3" preload="auto"></audio>
+
+          <a-mixin id="checkpoint"></a-mixin>
+        </a-assets>
+        <!-- end Asset management system -->
+
+        <a-sound
+          id="ambient-sound"
+          src="#music"
+          autoplay="true"
+          loop="true"
+        ></a-sound>
+
+        <!-- start Player -->
+        <a-entity
+          id="rig"
+          movement-controls="controls: checkpoint"
+          checkpoint-controls="mode: animate"
+          position="0 0 16"
+          rotation="0 -90 0"
+        >
+          <a-entity
+            camera
+            position="0 1.6 0"
+            look-controls="pointerLockEnabled: true"
+          >
+            <a-entity
+              cursor
+              raycaster="objects:[checkpoint]"
+              position="0 0 -1"
+              geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;"
+              material="color: #CCC; shader: flat;"
+            ></a-entity>
+          </a-entity> </a-entity
+        ><!-- end Player -->
+
+        <a-entity floor></a-entity>
+        <a-entity pillars></a-entity>
+        <a-entity id="walls">
+          <!-- Wall North -->
+          <a-gltf-model
+            shadow="receive: false; cast:true;"
+            src="#wall_doorway"
+            position="-2 0 16"
+            rotation="0 90 0"
+          ></a-gltf-model>
+          <a-gltf-model
+            shadow="receive: false; cast:true;"
+            src="#wall_half"
+            position="-2 0 14"
+            rotation="0 90 0"
+          ></a-gltf-model>
+
+          <a-entity
+            class="chimney"
+            gltf-model="#arched_chimney"
+            material="transparent: false; opacity: 1.0;"
+            shadow="receive: false; cast:true;"
+            position="-2 0 10"
+            rotation="0 90 0"
+          ></a-entity>
+          <a-gltf-model
+            src="#arched_chimney"
+            position="-2 0 6"
+            rotation="0 90 0"
+            shadow="receive: false; cast:true;"
+          ></a-gltf-model>
+          <a-gltf-model
+            shadow="receive: false; cast:true;"
+            src="#wall"
+            position="-2 0 2"
+            rotation="0 90 0"
+          ></a-gltf-model>
+
+          <!-- Wall East -->
+          <a-gltf-model src="#wall" position="2 0 -2"></a-gltf-model>
+          <a-gltf-model src="#arched_chimney" position="6 0 -2"></a-gltf-model>
+          <a-gltf-model src="#arched_chimney" position="10 0 -2"></a-gltf-model>
+          <a-gltf-model src="#wall" position="14 0 -2"></a-gltf-model>
+          <a-gltf-model src="#wall_half" position="16 0 -2"></a-gltf-model>
+
+          <!-- Wall South -->
+          <a-gltf-model
+            src="#wall_doorway"
+            position="18 0 0"
+            rotation="0 270 0"
+          ></a-gltf-model>
+          <a-gltf-model
+            src="#wall_half"
+            position="18 0 2"
+            rotation="0 270 0"
+          ></a-gltf-model>
+          <a-gltf-model
+            src="#arched_chimney"
+            position="18 0 6"
+            rotation="0 270 0"
+          ></a-gltf-model>
+          <a-gltf-model
+            src="#arched_chimney"
+            position="18 0 10"
+            rotation="0 270 0"
+          ></a-gltf-model>
+          <a-gltf-model
+            src="#wall"
+            position="18 0 14"
+            rotation="0 270 0"
+          ></a-gltf-model>
+
+          <!-- Wall West -->
+          <a-gltf-model
+            src="#wall_half"
+            position="0 0 18"
+            rotation="0 180 0"
+          ></a-gltf-model>
+          <a-gltf-model
+            src="#wall_arched_window"
+            position="2 0 18"
+            rotation="0 180 0"
+          ></a-gltf-model>
+          <a-gltf-model
+            src="#wall_arched_window"
+            position="6 0 18"
+            rotation="0 180 0"
+          ></a-gltf-model>
+          <a-gltf-model
+            src="#wall_arched_window"
+            position="10 0 18"
+            rotation="0 180 0"
+          ></a-gltf-model>
+          <a-gltf-model
+            src="#wall_arched_window"
+            position="14 0 18"
+            rotation="0 180 0"
+          ></a-gltf-model>
+
+          <!-- Wall Corners WN to SW--->
+          <a-gltf-model
+            src="#wall_corner_small"
+            position="-2 0 18"
+            rotation="0 180 0"
+          ></a-gltf-model>
+          <a-gltf-model
+            src="#wall_corner"
+            position="-2 0 -2"
+            rotation="0 90 0"
+          ></a-gltf-model>
+          <a-gltf-model
+            src="#wall_corner_small"
+            position="18 0 -2"
+            rotation="0 0 0"
+          ></a-gltf-model>
+          <a-gltf-model
+            src="#wall_corner"
+            position="18 0 18"
+            rotation="0 270 0"
+          ></a-gltf-model>
+        </a-entity>
+
+        <a-entity logs position="17.25 0.587 10"></a-entity>
+
+        <!-- start Fire North -->
+        <a-entity
+          position="-1.725 0.587 10"
+          sound="src: #crackling-fire; autoplay: true; loop: true; refDistance: 1; maxDistance: 12; rolloffFactor: 1; volume: 1; distanceModel: inverse;"
+        >
+          <a-entity logs></a-entity>
+
+          <!-- Flames-->
+          <a-entity
+            triangle-fire="particles: 500;"
+            position="0 -0.2 0"
+          ></a-entity>
+
+          <!-- start Light of flames-->
+          <a-entity
+            animation="property: position; dur: 223; to:0 0 0.05; loop:true; dir: alternate; easing: easeInOutQuad"
+          >
+            <a-entity
+              position="0.0 0.6 0.0"
+              animation="property: position; dur: 360; to: 0 0.65 0; loop:true; dir: alternate; easing: easeInOutQuad;"
+            >
+              <a-entity
+                light="type: point; color: #FFA200; intensity: 5; distance: 20.0; castShadow: true; shadowCameraVisible: false; decay: 5;"
+                animation="property: light.intensity; dur: 293; to:6; loop:true; dir:alternate; easing:easeInOutQuad;"
+              >
+              </a-entity>
+            </a-entity>
+          </a-entity>
+          <!-- end Light of flames-->
+        </a-entity>
+        <!-- end Fire North-->
+
+        <!-- start Fire South -->
+        <a-entity
+          position="17.25 0.587 6"
+          sound="src: #crackling-fire; autoplay: true; loop: true; refDistance: 1; maxDistance: 12; rolloffFactor: 1; volume: 1; distanceModel: inverse;"
+        >
+          <a-entity logs></a-entity>
+
+          <!-- Flames-->
+          <a-entity
+            triangle-fire="particles: 200; size: 0.25;"
+            position="0 -0.2 0"
+          ></a-entity>
+
+          <!-- start Light of flames-->
+          <a-entity
+            animation="property: position; dur: 223; to:0 0 0.05; loop:true; dir: alternate; easing: easeInOutQuad"
+          >
+            <a-entity
+              position="0.0 0.6 0.0"
+              animation="property: position; dur: 360; to: 0 0.65 0; loop:true; dir: alternate; easing: easeInOutQuad;"
+            >
+              <a-entity
+                light="type: point; color: #c63800; intensity: 4; distance: 10.0; castShadow: true; shadowCameraVisible: false; decay: 5;"
+                animation="property: light.intensity; dur: 293; to:3; loop:true; dir:alternate; easing:easeInOutQuad;"
+              >
+              </a-entity>
+            </a-entity>
+          </a-entity>
+          <!-- end Light of flames-->
+        </a-entity>
+        <!-- end Fire North-->
+
+        <!-- start Accessories -->
+        <a-gltf-model
+          src="#keg_decorated"
+          position="13.75 0 -0.6"
+          rotation="0 0 0"
+          scale="0.75 0.75 0.75"
+        ></a-gltf-model>
+
+        <a-gltf-model
+          src="#table_long"
+          position="12 0 8"
+          rotation="0 0 0"
+          scale="1 0.8 1"
+          shadow="cast:true; receive:true;"
+        ></a-gltf-model>
+
+        <a-gltf-model
+          src="#table_long"
+          position="4 0 8"
+          rotation="0 0 0"
+          scale="1 0.8 1"
+          shadow="cast:true; receive:true;"
+        ></a-gltf-model>
+
+        <a-entity
+          gltf-model="#knife"
+          position="3.944 0.8 6.648"
+          scale="0.5 0.5 0.5"
+          rotation="90 -30 0"
+        >
+        </a-entity>
+        <a-entity
+          gltf-model="#knife"
+          position="4.784 0.8 6.812"
+          scale="0.45 0.45 0.45"
+          rotation="90 -105 0"
+        >
+        </a-entity>
+
+        <a-entity
+          gltf-model="#plate"
+          position="4.670 0.8 8.930"
+          scale="1 0.5 1"
+        >
+        </a-entity>
+        <a-entity
+          gltf-model="#plate"
+          position="4 0.8 7.422"
+          scale="0.45 0.45 0.45"
+        >
+        </a-entity>
+
+        <a-entity
+          gltf-model="#pot_b"
+          position="4.836 0.5 -1.46"
+          scale="0.5 0.8 0.5"
+          rotation="0 40 0"
+        >
+        </a-entity>
+        <a-entity
+          gltf-model="#pot_b"
+          position="4.836 0.5 -0.994"
+          scale="0.5 0.5 0.5"
+          rotation="0 55 0"
+        >
+        </a-entity>
+
+        <a-entity
+          gltf-model="#crate"
+          position="-0.677 0.05 -0.523"
+          scale="0.5 0.8 0.5"
+          rotation="0 5 0"
+        >
+        </a-entity>
+        <a-entity
+          gltf-model="#crate"
+          position="0.6 0.05 -0.707"
+          scale="0.5 0.5 0.5"
+          rotation="0 55 0"
+        >
+        </a-entity>
+
+        <a-entity
+          gltf-model="#crate_carrots"
+          position="11.505 0.8 8.913"
+          scale="0.5 0.5 0.5"
+          rotation="0 55 0"
+        >
+        </a-entity>
+
+        <a-entity
+          gltf-model="#crate"
+          position="16.61 0.05 16.725"
+          scale="0.5 0.5 0.5"
+          rotation="0 -12 0"
+        >
+          <a-entity logs position="0 0.345 0" scale="1.5 1.75 1.5"></a-entity>
+        </a-entity>
+
+        <!-- end Accessories -->
+
+        <!-- start Pork-->
+        <a-entity position="17 0.587 6" rotation="0 90 0">
+          <a-entity
+            position="0 1 0"
+            animation="property: rotation; to:360 0 0; dur:5000; loop: true;"
+            gltf-model="#pork"
+          ></a-entity>
+          <a-entity
+            gltf-model="#peak"
+            shadow="cast:true; receive:false;"
+          ></a-entity>
+        </a-entity>
+        <!-- end Pork -->
+
+        <!-- start Food -->
+        <a-entity
+          position="3.543 0.8 8.23"
+          gltf-model="#cheese"
+          scale="0.3 0.3 0.3"
+          rotation="0 -34 0"
+        ></a-entity>
+        <a-entity
+          position="3.653 0.8 7.97"
+          gltf-model="#cheese"
+          scale="0.3 0.3 0.3"
+        ></a-entity>
+        <a-entity
+          position="3.996 0.8 8.1"
+          rotation="0 22 0"
+          gltf-model="#cheese_chopped"
+          scale="0.3 0.3 0.3"
+        ></a-entity>
+
+        <a-entity
+          position="4.391 0.89 6.524"
+          rotation="90 -30 5"
+          gltf-model="#carrot"
+          scale="0.3 0.3 0.3"
+        ></a-entity>
+        <a-entity
+          position="4.584 0.89 6.23"
+          rotation="90 32 0"
+          gltf-model="#carrot"
+          scale="0.3 0.3 0.3"
+        ></a-entity>
+        <a-entity
+          position="4.88 0.89 6.323"
+          rotation="90 0 0"
+          gltf-model="#carrot_chopped"
+          scale="0.3 0.3 0.3"
+        ></a-entity>
+
+        <a-entity
+          position="3.22 0.8 6.76"
+          gltf-model="#onion"
+          scale="0.3 0.3 0.3"
+        ></a-entity>
+        <a-entity
+          position="3.27 0.8 7"
+          gltf-model="#onion"
+          scale="0.3 0.3 0.3"
+        ></a-entity>
+        <a-entity
+          position="3.592 0.8 6.7"
+          gltf-model="#onion_chopped"
+          scale="0.3 0.3 0.3"
+        ></a-entity>
+
+        <a-entity
+          position="3.245 0.804 9.671"
+          rotation="15 0 5"
+          scale="0.3 0.3 0.3"
+          gltf-model="#lettuce"
+        ></a-entity>
+        <a-entity
+          position="3.532 0.785 9.665"
+          rotation="2 33 0"
+          scale="0.3 0.3 0.3"
+          gltf-model="#lettuce"
+        ></a-entity>
+
+        <a-entity
+          position="4.57 0.8 9.07"
+          rotation="0 32 0"
+          gltf-model="#steak"
+          scale="0.3 0.3 0.3"
+        ></a-entity>
+        <a-entity
+          position="4.59 0.8 8.74"
+          rotation="5 0 0"
+          gltf-model="#steak"
+          scale="0.3 0.3 0.3"
+        ></a-entity>
+        <a-entity
+          position="4.82 0.8 8.99"
+          rotation="-5 82 0"
+          gltf-model="#steak"
+          scale="0.3 0.3 0.3"
+        ></a-entity>
+        <!-- end Food -->
+
+        <!-- start Checkpoints -->
+        <a-entity id="checkpoints" position="0 0 0">
+          <a-entity position="0 0.2 16">
+            <a-entity checkpoint id="point-start"></a-entity>
+          </a-entity>
+        </a-entity>
+        <!-- end Checkpoints -->
+
+        <!-- Ambient light -->
+        <a-entity light="type: ambient; color: #444"></a-entity>
+      </a-scene>
+    </div>
+  </body>
+</html>
