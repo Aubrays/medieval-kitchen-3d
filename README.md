@@ -1,6 +1,6 @@
 # Cuisine médiévale 3D
 
-![Aperçu dynamique de la cuisine](https://github.com/aubrays/medieval-kichen-3d/blob/master/preview.webp?raw=true)
+![Aperçu dynamique de la cuisine](https://raw.githubusercontent.com/Aubrays/medieval-kitchen-3d/master/preview.webp)
 
 Dans quel environnement les cuisiniers médiévaux réalisaient-ils des banquets aux multiples plats et aux très nombreux convives ? Si nous savons que certains plats n'atteignaient pas les personnes les plus modestes, il fallait quand même cuisiner l'ensemble.
 
