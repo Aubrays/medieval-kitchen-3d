@@ -23,14 +23,15 @@ window.onload = function () {
 
     ui.style.display = "none";
 
-    let checkpointEl = document.getElementById("point-start").parentNode;
+    let checkpointEl = document.getElementById("point-start");
 
     checkpointEl.setAttribute(
       "sound",
-      `src: #welcome; autoplay:true; volume: 1.5;`,
+      `src: #welcome-guyde; autoplay:true; volume: 1.5;`,
     );
 
     checkpointEl.addEventListener("sound-ended", () => {
+      checkpointEl.remove(document.getElementById("start-guyde"));
       let entityEl = document.createElement("a-entity");
       entityEl.setAttribute("add-next-guyde", "");
 
@@ -45,36 +46,38 @@ const checkpoints = [
   {
     id: "point-1",
     position: "0.5 0 9",
-    offset: "0 0 1",
+    offset: "0 0 2",
     rotation: "0 -12 0",
+    speech: "#fire-guyde",
   },
   {
     id: "point-2",
     position: "0.5 0 2",
     offset: "0 0 2",
     rotation: "0 30 0",
-    sound: "#hit_on_table",
+    speech: "#table-guyde",
+    sound: "#cutting_sound",
   },
   {
     id: "point-3",
     position: "6 0 2",
     offset: "-1 0 1",
     rotation: "0 -50 0",
-    sound: "#cutting_sound",
+    speech: "#carrots-guyde",
   },
   {
     id: "point-4",
     position: "12 0 4",
     offset: "-2 0 1",
     rotation: "0 -75 0",
-    sound: "#beer",
+    speech: "#spit-guyde",
   },
   {
     id: "end-point",
     position: "12 0 17",
     offset: "-1 0 -1",
     rotation: "0 225 0",
-    sound: "#bye",
+    speech: "#bye-guyde",
   },
 ];
 
@@ -107,20 +110,21 @@ window.addEventListener("navigation-end", function (event) {
 
   currentCheckpointEl.parentNode.setAttribute(
     "play-audio-guide",
-    currentCheckpoint.sound,
+    currentCheckpoint.speech,
   );
 
+  currentCheckpointEl.setAttribute("play-audio-guide", currentCheckpoint.sound);
+
   stepCounter++;
+
   if (currentCheckpointEl.id !== "checkpoint-end-point") {
     let entityEl = document.createElement("a-entity");
-    entityEl.setAttribute("add-next-guyde", "");
 
-    // Remove the previous guyde group with the light
-    entityEl.setAttribute("remove-previous-guyde", "");
-
-    checkpointsEl.appendChild(entityEl);
-
-    // Remove the current checkpoint with the guy but keep the light
-    currentCheckpointEl.parentNode.removeChild(currentCheckpointEl);
+    currentCheckpointEl.parentNode.addEventListener("sound-ended", function () {
+      entityEl.setAttribute("add-next-guyde", "");
+      checkpointsEl.appendChild(entityEl);
+      // Remove the previous guyde group with the light
+      entityEl.setAttribute("remove-previous-guyde", "");
+    });
   }
 });

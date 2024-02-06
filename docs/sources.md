@@ -20,8 +20,6 @@ Auteur inconnu, [*Dijon, Palais ducal, intérieur des cuisines*](https://p.monum
 
 Viollet-le-Duc Eugène, « [Cuisine](https://www.wiki-anjou.fr/index.php/Dictionnaire_d%27architecture_de_Viollet_le_Duc_-_cuisine) » in :Dictionnaire raisonné de l’architecture française du XIe au XVIe siècle, Édition Bance — Morel, 1854-1868, p. 461-485, consulté en ligne le 25 janvier 2024.
 
-
-
 Rizotti André, [*Dijon City Hall : Ducale Kitchen*](https://www.360cities.net/it/image/dijon-city-hall-ducale-kitchen), site web avec vue photographique 360°, 2011, consulté en ligne le 25 janvier 2024.
 
 Charles Louis (?), [*Dijon / Palais des Ducs de Bourgogne - Cuisines ducales (après restauration)*](https://www.flickr.com/photos/101048357@N04/50925180036/in/photostream/), photographie, 2020, consulté en ligne le 25 janvier 2024

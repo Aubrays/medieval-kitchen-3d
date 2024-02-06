@@ -3,7 +3,7 @@ AFRAME.registerComponent("play-audio-guide", {
   init: function () {
     this.el.setAttribute(
       "sound",
-      `src: ${this.data}; autoplay:true; volume: 1.5;`,
+      `src: ${this.data}; autoplay:true; volume: 1.5; positional: false`,
     );
   },
 });
