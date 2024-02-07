@@ -18,6 +18,7 @@ window.onload = function () {
     context.resume().then(() => {
       console.log("Playback resumed successfully");
     });
+    
 
     let ambientSoundEl = document.getElementById("ambient-sound");
     let fires = document.getElementsByClassName("fire");
@@ -34,9 +35,11 @@ window.onload = function () {
 
     checkpointEl.setAttribute(
       "sound",
-      `src: #welcome-guyde; autoplay:true; volume: 1.5;`,
+      `src: #welcome-guyde; autoplay:false; volume: 1.5;`,
     );
 
+    checkpointEl.components.sound.playSound();
+    
     checkpointEl.addEventListener("sound-ended", () => {
       checkpointEl.remove(document.getElementById("start-guyde"));
       let entityEl = document.createElement("a-entity");
