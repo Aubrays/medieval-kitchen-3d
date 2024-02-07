@@ -201,7 +201,7 @@
         <a-sound
           id="ambient-sound"
           src="#music"
-          autoplay="true"
+          autoplay="false"
           loop="true"
           positional="false"
         ></a-sound>
@@ -358,8 +358,9 @@
 
         <!-- start Fire North -->
         <a-entity
+          class="fire"
           position="-1.725 0.587 10"
-          sound="src: #crackling-fire; autoplay: true; loop: true; refDistance: 1; maxDistance: 12; rolloffFactor: 1; volume: 1; distanceModel: inverse;"
+          sound="src: #crackling-fire; autoplay: false; loop: true; refDistance: 1; maxDistance: 12; rolloffFactor: 1; volume: 1; distanceModel: inverse;"
         >
           <a-entity logs></a-entity>
 
@@ -390,8 +391,9 @@
 
         <!-- start Fire South -->
         <a-entity
+          class="fire"
           position="17.25 0.587 6"
-          sound="src: #crackling-fire; autoplay: true; loop: true; refDistance: 1; maxDistance: 12; rolloffFactor: 1; volume: 1; distanceModel: inverse;"
+          sound="src: #crackling-fire; autoplay: false; loop: true; refDistance: 1; maxDistance: 12; rolloffFactor: 1; volume: 1; distanceModel: inverse;"
         >
           <a-entity logs></a-entity>
 

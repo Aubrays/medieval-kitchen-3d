@@ -15,12 +15,19 @@ window.onload = function () {
   context = THREE.AudioContext.getContext();
 
   btn.addEventListener("click", () => {
-    if (context.state !== "running") {
-      context.resume().then(() => {
-        console.log("Playback resumed successfully");
-      });
-    }
+    context.resume().then(() => {
+      console.log("Playback resumed successfully");
+    });
 
+    let ambientSoundEl = document.getElementById("ambient-sound");
+    let fires = document.getElementsByClassName("fire");
+
+    ambientSoundEl.components.sound.playSound();
+
+    [...fires].map((fire) => {
+      fire.components.sound.playSound();
+    })
+  
     ui.style.display = "none";
 
     let checkpointEl = document.getElementById("point-start");
