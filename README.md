@@ -2,6 +2,10 @@
 
 ![Aperçu dynamique de la cuisine](https://raw.githubusercontent.com/Aubrays/medieval-kitchen-3d/master/preview.webp)
 
+## [Visiter la cuisine 🍲](https://aubrays.github.io/medieval-kitchen-3d/)
+
+## Problématique
+
 Dans quel environnement les cuisiniers médiévaux réalisaient-ils des banquets aux multiples plats et aux très nombreux convives ? Si nous savons que certains plats n'atteignaient pas les personnes les plus modestes, il fallait quand même cuisiner l'ensemble.
 
 Afin de comprendre l'univers des cuisines médiévales, nous avons opté pour une représentation artistique s'inspirant des sources médiévales. Et si la cuisine s'effectue aussi dans les maisons bourgeoises et dans les foyers modestes, nous avons choisi de travailler avec les sources iconographiques et archéologiques à notre disposition et celles-ci concernent essentiellement les châteaux. Ce corpus est d'ailleurs discutable, car seules quelques cuisines sont connues car faites de pierre. Entre les cabanes en bois abritant de simples foyers ou les tentes en extérieur, il était plutôt fréquent de cuisiner à l'extérieur lors des grandes occasions et même au quotidien en raison du risque d'incendie.
