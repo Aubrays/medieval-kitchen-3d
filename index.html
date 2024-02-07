@@ -7,7 +7,7 @@
     <title>A medieval kitchen</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
-    <script type="module" crossorigin src="/medieval-kitchen-3d/assets/index-fxSifK1L.js"></script>
+    <script type="module" crossorigin src="/medieval-kitchen-3d/assets/index-DQ2aON82.js"></script>
     <link rel="stylesheet" crossorigin href="/medieval-kitchen-3d/assets/index-74CktXpQ.css">
   </head>
   <body>
@@ -141,41 +141,50 @@
           <!-- Audios-->
           <audio
             id="crackling-fire"
-            src="assets/sounds/crackling-fire.ogg"
-            preload="auto"
-          ></audio>
-          <audio
-            id="hit_on_table"
-            src="assets/sounds/hit-on-table.ogg"
+            src="assets/sounds/crackling-fire_96k.opus"
             preload="auto"
           ></audio>
 
           <audio
             id="cutting_sound"
-            src="assets/sounds/cutting_sound.ogg"
+            src="assets/sounds/cutting_sound.opus"
             preload="auto"
           ></audio>
 
           <audio
-            id="beer"
-            src="assets/sounds/beerpour.mp3"
-            preload="auto"
-          ></audio>
-
-          <audio
-            id="welcome"
-            src="assets/sounds/welcome-traveler.mp3"
+            id="welcome-guyde"
+            src="assets/audio_texts/1-accueil_64k.opus"
             preload="auto"
           ></audio>
           <audio
-            id="bye"
-            src="assets/sounds/bye-bye.mp3"
+            id="fire-guyde"
+            src="assets/audio_texts/2-feu_64k.opus"
+            preload="auto"
+          ></audio>
+          <audio
+            id="table-guyde"
+            src="assets/audio_texts/3-table_64k.opus"
+            preload="auto"
+          ></audio>
+          <audio
+            id="carrots-guyde"
+            src="assets/audio_texts/4-carottes_64k.opus"
+            preload="auto"
+          ></audio>
+          <audio
+            id="spit-guyde"
+            src="assets/audio_texts/5-broche_64k.opus"
+            preload="auto"
+          ></audio>
+          <audio
+            id="bye-guyde"
+            src="assets/audio_texts/6-fin_64k.opus"
             preload="auto"
           ></audio>
 
           <audio
             id="music"
-            src="assets/sounds/a_night_s_respite.ogg"
+            src="assets/sounds/a_night_s_respite_32k.opus"
             preload="auto"
           ></audio>
 
@@ -190,6 +199,7 @@
           src="#music"
           autoplay="true"
           loop="true"
+          positional="false"
         ></a-sound>
 
         <!-- start Player -->
@@ -219,12 +229,15 @@
         <a-entity pillars></a-entity>
         <a-entity id="walls">
           <!-- Wall North -->
-          <a-gltf-model
+
+          <a-entity
+            checkpoint="offset: 1 0 0"
+            class="door"
+            gltf-model="#wall_doorway"
             shadow="receive: false; cast:true;"
-            src="#wall_doorway"
             position="-2 0 16"
             rotation="0 90 0"
-          ></a-gltf-model>
+          ></a-entity>
           <a-gltf-model
             shadow="receive: false; cast:true;"
             src="#wall_half"
@@ -608,7 +621,14 @@
         <!-- start Checkpoints -->
         <a-entity id="checkpoints" position="0 0 0">
           <a-entity position="0 0.2 16">
-            <a-entity checkpoint id="point-start"></a-entity>
+            <a-entity checkpoint id="point-start">
+              <a-entity
+                id="start-guyde"
+                gltf-model="#guyde"
+                position="2 0 0"
+                rotation="0 -90 0"
+              ></a-entity>
+            </a-entity>
           </a-entity>
         </a-entity>
         <!-- end Checkpoints -->
