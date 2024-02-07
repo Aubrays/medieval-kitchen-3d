@@ -2,7 +2,7 @@
 
 Une des grandes difficultés de ce projet a été de trouver des modèles low poly pour constituer la cuisine et ses éléments.
 
-Voir le document "notes_et_reflexions" pour plus de détails.
+Voir le document [Retour d'expérience sur ce projet 3D](https://github.com/Aubrays/medieval-kitchen-3d/blob/master/docs/retex-projet-3d.md) pour plus de détails.
 
 Voici ci-après des assets qui n'ont pas été retenus en raison de leur licence, de leur coût d'achat ou des modifications à apporter, qu'elles soient réalisées par l'artiste ou par nous-même.
 

@@ -1,5 +1,7 @@
 # Sources documentaires
 
+Laurioux Bruno, *Manger au Moyen Âge: pratiques et discours alimentaires en Europe au XIVe et XVe siècles*, Paris : Hachette Littératures, 2013, 299 p.
+
 Salamagne Alain, « L'architecture des cuisines du château médiéval et renaissant ». In : Pierre-Gilles Girault et Hélène Lebédel-Carbonnel, *Festins de la Renaissance : cuisine et trésors de la table* [Exposition, Château royal de Blois, 7 juillet-21 octobre 2012], Paris, Somogy ; Blois, Château royal de Blois, pp.134-145, 2012.
 
 Salamagne Alain, « [Les cuisines et leurs offices](https://doi.org/10.4000/books.pufr.32532) ». In : *La table de la Renaissance : Le mythe italien*. Tours : Presses universitaires François-Rabelais, 2018. Cconsulté en ligne le 25 janvier 2024.

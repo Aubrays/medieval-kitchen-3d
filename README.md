@@ -10,9 +10,10 @@ Ainsi si cette cuisine en 3D s'inspire de la cuisine du Palais des Ducs de Bourg
 
 ## Un prototype 
 
-En l'état (janvier 2024), le projet est à considérer comme un prototype.
+En l'état (début février 2024), le projet est à considérer comme un prototype.
 
 Ainsi seul le navigateur Chrome/Chromium est supporté et des améliorations seraient à réaliser. Voici notamment des propositions de [développements possibles](https://github.com/Aubrays/medieval-kitchen-3d/tree/master/docs/developpements_possibles.md).
+
 ## Choix techniques
 
 Le projet est conçu avec A-frame, un framework Javascript s'appuyant sur la bibliothèque Three.JS.
@@ -33,6 +34,10 @@ Ce projet a été publié en janvier 2024 par Loïc Aubrays pour le cours _Réal
 
 ## Credits
 
+[KayKit : Dungeon Remastered Pack (1.0)](https://kaylousberg.itch.io/kaykit-dungeon-remastered) by Kay Lousberg is licenced under [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/)
+
+[KayKit : Restaurant Bits (1.0)](https://kaylousberg.itch.io/restaurant-bits) by Kay Lousberg is licenced under [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/)
+
 ["Log - Blacksmith's workshop assets"](https://skfb.ly/69GOy) by Kyan0s is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
 
 ["Logs - Blacksmith's workshop assets"](https://skfb.ly/69CxV) by Kyan0s is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
@@ -43,4 +48,4 @@ Ce projet a été publié en janvier 2024 par Loïc Aubrays pour le cours _Réal
 
 [Guest male 4 - Medieval Fantasy Challenge](https://skfb.ly/69VX9) by tuturu is licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
 
-Sound Effect by [Sergei Chetvertnykh](https://pixabay.com/users/sergequadrado-24990007/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=113119) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=113119")
+[A Night's Respite](https://www.nicolelyria.com/music-store/p/medieval-themes-free) by Nicole Lyria is licensed under an [End User License Agreement](https://static1.squarespace.com/static/60a01f5d4e9cf244cb4af46d/t/61a534482b1c155d953f8775/1638216776769/End+User+License+Agreement+-+Music+Packs.pdf)

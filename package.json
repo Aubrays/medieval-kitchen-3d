@@ -1,7 +1,9 @@
 {
   "name": "medieval-kitchen-3d",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.2.0",
+  "homepage": "https://github.com/Aubrays/medieval-kitchen-3d#readme",
+  "license": "UNLICENSED",
   "type": "module",
   "scripts": {
     "dev": "vite",
